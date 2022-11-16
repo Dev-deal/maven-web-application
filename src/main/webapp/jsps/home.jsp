@@ -9,9 +9,10 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to Mithun Software Solutions. Bengaluru,Karnataka </h1>
-<h1 align="center"> Mithun Software Solutions- Very Good Training center for DevOps with AWS in Maratha Halli Bangalore India and also for Job Assitance Job Support also...Teaching Real Time scnerios</h1>
-<hr>
+<h1 align="center">App deployment from Jenkins </h1>
+<h1 align="center"> We had performed below steps:<br> 1) Build RHEL linux server with jenkins <br> 2)Setup maven tool, compile and build the package <br> Performed static code analysis from sonarqube<br> 3) Push package to Nexus artifactory <br>4) install plugin "deploy to container" and deploy app to Tomcat.
+	<hr>
+	<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.jenkins.io%2F&psig=AOvVaw0ROj1CV1ljboiqCVk9XUYr&ust=1668660545392000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCNCvv4zzsfsCFQAAAAAdAAAAABAD" alt="Jenkins logo">
 <br>
 	<h1><h3> Server Side IP Address </h3><br>
 
