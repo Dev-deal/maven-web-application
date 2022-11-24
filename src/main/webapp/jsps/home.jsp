@@ -10,10 +10,16 @@
 </head>
 <body>
 <h1 align="center">App deployment from Jenkins </h1>
+<h3>Today's task</h3>
+
+<h2>slack notification + properties (old discard build , trigger) for pipeline (scripted and declarative )</h2>
+
 <h1 align="center"><h3>-- We had successfully deployed the web app from jenkins via declarative pipeline --</h3>
-<h2>Below is the template/steps:<br>
+<h3>Below is the template/steps:<br>
 pipeline{
 <br>
+agent any
+	<br>
 tools{
 	<br>
 --------------
@@ -43,7 +49,7 @@ steps{<br>
 
  }}<br>
 
-}}</h2>
+}}</h3>
 	<hr>
 	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM1-JROctBy0tatw5tsBf6f05z2KncU-2kznhR6-d2O8nX4qZYsBAwQAAI0D4i3qN_EWs&usqp=CAU"><br>
 	<h1><h3> Server Side IP Address </h3><br>
