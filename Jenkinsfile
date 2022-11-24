@@ -11,18 +11,22 @@ git branch: 'stage', url: 'https://github.com/Dev-deal/maven-web-application.git
 }
 
 stage('buildpackage'){
+notifyBuild(String buildStatus = 'Build has been STARTED')
 sh "${mavenHome}/bin/mvn clean package"
 }
 
 stage('sonarqubereport'){
+notifyBuild(String buildStatus = 'Sonarqube report has been generated')
     sh "${mavenHome}/bin/mvn sonar:sonar"
 }
 
 stage('sendtoartifactory'){
+notifyBuild(String buildStatus = 'Artifact has been pushed to nexus')
 sh "${mavenHome}/bin/mvn deploy"
 }
 
 stage('deploytotomcat'){
+notifyBuild(String buildStatus = 'Deployment to tomcat server is completed')
     sshagent(['7a50e8f4-ac0d-4bb6-a71d-eabdb54fe32a']){
       sh "scp -o StrictHostKeyChecking=no  target/maven-web-application.war ec2-user@172.31.19.106:/opt/apache-tomcat-9.0.68/webapps"
 }
