@@ -2,6 +2,8 @@ node{
 
 def mavenHome=tool name: 'maven_3.8.6'
 
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '5', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
+
 stage('getcodefromgit'){
 git branch: 'stage', url: 'https://github.com/Dev-deal/maven-web-application.git'
 }
